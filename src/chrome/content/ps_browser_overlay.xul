@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://page-snoozer/locale/cue_browser_overlay.dtd">
+
+<overlay id="page-snoozer"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+	<commandset id="mainCommandSet">
+		<command id="pagesnoozer-command-snooze" oncommand="pageSnoozer.handleSnoozeAddedCommand(event);" />
+		<command id="pagesnoozer-command-listsnoozes" oncommand="pageSnoozer.handleListSnoozesCommand(event);" />
+	</commandset>
+	
+	<!-- Tab Context Menu -->
+	<!--
+	<popupset id="mainPopupSet">
+		<menupopup id="tabContextMenu" >
+			<menuseparator id="pagesnoozer-tabcontext-separator" />
+			<menu id="copyurlsexpert-tabcontext-mainmenu" label="&copyurlsexpert.common.menupopuplabel;" 
+					class="menuitem-iconic" insertafter="copyurlsexpert-tabcontext-separator"
+					accesskey="&copyurlsexpert.common.menupopupaccesskey;">
+				<menupopup>
+					<menuitem label="&copyurlsexpert.common.activewinmenulabel;"
+							  accesskey="&copyurlsexpert.common.activewinaccesskey;"
+							  oncommand="copyUrlsExpert.performCopyTabsUrl(true);"/>
+					<menuitem label="&copyurlsexpert.common.allwinmenulabel;"
+							  accesskey="&copyurlsexpert.common.allwinaccesskey;"
+							  oncommand="copyUrlsExpert.performCopyTabsUrl(false);" />
+				</menupopup>
+			</menu>
+		</menupopup>
+	</popupset>
+        -->							   
+	<!-- Firefox Toolbar Icon -->
+	<!--
+	<toolbarpalette id="BrowserToolbarPalette">
+		<toolbarbutton id="copyurlsexpert-toolbar-btnmain" type="menu-button" 
+			label="&copyurlsexpert.common.menupopuplabel;" tooltiptext="&copyurlsexpert.common.menupopuplabel;"
+			oncommand="copyUrlsExpert.handleToolbarButtonClick(event);"
+			class="toolbarbutton-1 chromeclass-toolbar-additional"
+			image="chrome://copy-urls-expert/skin/cue-icon24.png" >
+			<menupopup>
+				<menuitem id="copyurlsexpert-toolbar-btnactivewin" 
+						  label="&copyurlsexpert.common.activewinmenulabel;"
+						  accesskey="&copyurlsexpert.common.activewinaccesskey;"
+						  tooltiptext="&copyurlsexpert.common.activewintooltip;" />
+				<menuitem id="copyurlsexpert-toolbar-btnallwin" 
+						  label="&copyurlsexpert.common.allwinmenulabel;"
+						  accesskey="&copyurlsexpert.common.allwinaccesskey;"
+						  tooltiptext="&copyurlsexpert.common.allwintooltip;" />
+				<menuseparator />
+				<menuitem id="copyurlsexpert-toolbar-btnopentabs" 
+						  label="&copyurlsexpert.common.opentabsmenulabel;"
+						  command="copyurlsexpert-command-opentabs"
+						  class="menuitem-iconic"
+						  accesskey="&copyurlsexpert.common.opentabsaccesskey;" />
+				<menuseparator />
+				<menuitem id="copyurlsexpert-toolbar-btnoptions" 
+						  label="&copyurlsexpert.common.optionsmenulabel;"
+						  accesskey="&copyurlsexpert.common.optionsaccesskey;"
+						  tooltiptext="&copyurlsexpert.common.optionstooltip;" />
+			</menupopup>
+		</toolbarbutton>
+	</toolbarpalette>
+	
+	
+	<popup id="contentAreaContextMenu">
+		<menu id="copyurlsexpert-contextmenu-mainmenu" label="&copyurlsexpert.common.menupopuplabel;"
+			  accesskey="&copyurlsexpert.common.menupopupaccesskey;"
+			  class="menuitem-iconic" insertafter="context-copy">
+			<menupopup>
+				<menuitem label="&copyurlsexpert.common.selurlsmenulabel;"
+						  accesskey="&copyurlsexpert.common.selurlsaccesskey;"
+						  oncommand="copyUrlsExpert.performCopySelectedUrls('a', copyUrlsExpert.getEntryFromLink);" />
+				<menuitem label="&copyurlsexpert.common.selimgsmenulabel;"
+						  accesskey="&copyurlsexpert.common.selimgsaccesskey;"
+						  oncommand="copyUrlsExpert.performCopySelectedUrls('img', copyUrlsExpert.getEntryFromImage);" />				
+			</menupopup>
+		</menu>
+	</popup>
+	-->
+	<script type="application/x-javascript" src="chrome://page-snoozer/content/pagesnoozer.js"></script>
+	
+</overlay>

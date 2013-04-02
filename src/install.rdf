@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+	<em:id>page-snoozer@kashiif.com</em:id>
+	<em:type>2</em:type>
+	<em:name>Page Snoozer</em:name>
+	<em:version>__version__</em:version>
+	<em:creator>Kashif Iqbal Khan</em:creator>
+    <em:homepageURL>http://www.kashiif.com/firefox-extensions/page-snoozer/</em:homepageURL>
+	<em:description>Hide tabs and schedule them to open later automatically.</em:description>
+	<!--
+	<em:optionsURL>chrome://page-snoozer/content/options.xul</em:optionsURL>
+	-->
+    <em:iconURL>chrome://page-snoozer/skin/ps-icon.png</em:iconURL>
+    <em:icon64URL>chrome://page-snoozer/skin/ps-icon64.png</em:icon64URL>
+
+
+	<em:targetApplication>
+	  <Description>
+		<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id><!-- Firefox -->
+		<em:minVersion>3.6</em:minVersion> <!-- File IO API being used requires Gecko version 1.9.2 -->
+		<em:maxVersion>15.0a1</em:maxVersion>
+	  </Description>
+	</em:targetApplication>
+	
+    <em:targetApplication>
+      <Description>
+        <em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id><!-- SeaMonkey -->
+        <em:minVersion>2.1</em:minVersion> <!-- File IO API being used requires Gecko version 1.9.2 -->
+        <em:maxVersion>2.12a1</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+	
+  </Description>
+</RDF>
