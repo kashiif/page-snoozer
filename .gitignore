@@ -1,1 +1,5 @@
 .idea
+page-snoozer.sublime-*
+node_modules
+dist/
+page-snoozer@kashiif.com
